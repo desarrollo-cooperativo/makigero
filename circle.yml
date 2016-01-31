@@ -1,3 +1,8 @@
 dependencies:
   pre:
     - echo 'y' | android update sdk --filter build-tools-23.0.0 --no-ui --all
+deployment:
+  upload:
+    branch: master
+    commands:
+      - ./gradlew :utils:bintrayUpload
