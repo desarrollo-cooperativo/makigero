@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'utils'
+    bintrayOrg = 'decop'
+    versionName = "0.1"
+
+    publishedGroupId = 'com.feragusper.makigero'
+    libraryName = 'utils'
+    artifact = 'utils'
+
+    libraryDescription = 'An Android Library that provides a collection of utils for different purposes'
+
+    siteUrl = 'https://github.com/desarrollo-cooperativo/android-common-utils'
+    gitUrl = 'https://github.com/desarrollo-cooperativo/android-common-utils.git'
+
+    libraryVersion = '0.1'
+
+    developerId = 'feragusper'
+    developerName = 'Fernando Perez'
+    developerEmail = 'fernancho@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
