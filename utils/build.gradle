@@ -115,6 +115,15 @@ artifacts {
 }
 
 // Bintray
+if (System.hasProperty('BINTRAY_USER')) {
+    //noinspection GrReassignedInClosureLocalVar
+    user = System.getenv('BINTRAY_USER')
+}
+
+if (System.hasProperty('BINTRAY_KEY')) {
+    //noinspection GrReassignedInClosureLocalVar
+    user = System.getenv('BINTRAY_KEY')
+}
 
 bintray {
 
@@ -123,11 +132,6 @@ bintray {
         properties.load(project.rootProject.file('local.properties').newDataInputStream())
         user = properties.getProperty("bintray.user")
         key = properties.getProperty("bintray.apikey")
-    } else {
-        //noinspection GrReassignedInClosureLocalVar
-        user = $System.env.BINTRAY_USER
-        //noinspection GrReassignedInClosureLocalVar
-        key = $System.env.BINTRAY_KEY
     }
 
     configurations = ['archives']
