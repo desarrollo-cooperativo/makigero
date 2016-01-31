@@ -125,9 +125,9 @@ bintray {
         key = properties.getProperty("bintray.apikey")
     } else {
         //noinspection GrReassignedInClosureLocalVar
-        user = $BINTRAY_USER
+        user = $System.env.BINTRAY_USER
         //noinspection GrReassignedInClosureLocalVar
-        key = $BINTRAY_KEY
+        key = $System.env.BINTRAY_KEY
     }
 
     configurations = ['archives']
