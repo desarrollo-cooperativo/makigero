@@ -115,17 +115,18 @@ artifacts {
 }
 
 // Bintray
-//noinspection GrReassignedInClosureLocalVar
-if (System.getenv('BINTRAY_USER')) {
-    user = System.getenv('BINTRAY_USER')
-}
-
-//noinspection GrReassignedInClosureLocalVar
-if (System.getenv('BINTRAY_KEY')) {
-    user = System.getenv('BINTRAY_KEY')
-}
 
 bintray {
+
+    //noinspection GrReassignedInClosureLocalVar
+    if (System.getenv('BINTRAY_USER')) {
+        user = System.getenv('BINTRAY_USER')
+    }
+
+    //noinspection GrReassignedInClosureLocalVar
+    if (System.getenv('BINTRAY_KEY')) {
+        user = System.getenv('BINTRAY_KEY')
+    }
 
     if (project.rootProject.file('local.properties').exists()) {
         Properties properties = new Properties()
