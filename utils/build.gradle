@@ -12,8 +12,8 @@ ext {
 
     libraryDescription = 'An Android Library that provides a collection of utils for different purposes'
 
-    siteUrl = 'https://github.com/desarrollo-cooperativo/android-common-utils'
-    gitUrl = 'https://github.com/desarrollo-cooperativo/android-common-utils.git'
+    siteUrl = 'https://github.com/desarrollo-cooperativo/makigero'
+    gitUrl = 'https://github.com/desarrollo-cooperativo/makigero.git'
 
     libraryVersion = '0.1'
 
