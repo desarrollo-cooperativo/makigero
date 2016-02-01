@@ -115,12 +115,12 @@ artifacts {
 }
 
 // Bintray
-if (System.hasProperty('BINTRAY_USER')) {
+if (System.getenv().hasProperty('BINTRAY_USER')) {
     //noinspection GrReassignedInClosureLocalVar
     user = System.getenv('BINTRAY_USER')
 }
 
-if (System.hasProperty('BINTRAY_KEY')) {
+if (System.getenv().hasProperty('BINTRAY_KEY')) {
     //noinspection GrReassignedInClosureLocalVar
     user = System.getenv('BINTRAY_KEY')
 }
