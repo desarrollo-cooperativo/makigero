@@ -125,7 +125,7 @@ bintray {
 
     //noinspection GrReassignedInClosureLocalVar
     if (System.getenv('BINTRAY_KEY')) {
-        user = System.getenv('BINTRAY_KEY')
+        key = System.getenv('BINTRAY_KEY')
     }
 
     if (project.rootProject.file('local.properties').exists()) {
