@@ -1,5 +1,5 @@
 //noinspection GroovyUnusedAssignment
-def getVersionName = { ->
+def getBuildNumber = { ->
     def os = System.getProperty("os.name").toLowerCase()
     def revision = new ByteArrayOutputStream()
     if (!os.contains("windows")) {
@@ -23,11 +23,15 @@ def getVersionName = { ->
     return revision
 }
 
+ext {
+    buildNumber = getBuildNumber()
+}
+
 buildscript {
     repositories {
         jcenter()
         maven {
-            url  "http://dl.bintray.com/feragusper/maven"
+            url "http://dl.bintray.com/feragusper/maven"
         }
     }
     dependencies {
@@ -41,7 +45,7 @@ allprojects {
     repositories {
         jcenter()
         maven {
-            url  "http://dl.bintray.com/feragusper/maven"
+            url "http://dl.bintray.com/feragusper/maven"
         }
     }
 }
