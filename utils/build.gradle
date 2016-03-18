@@ -4,10 +4,10 @@ apply plugin: 'com.github.dcendents.android-maven'
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'utils'
-    bintrayOrg = 'decop'
+    bintrayOrg = 'cardumen'
     versionName = '0.1.0.' + buildNumber
 
-    publishedGroupId = 'com.feragusper.makigero'
+    publishedGroupId = 'com.cardumen.makigero'
     libraryName = 'utils'
     artifact = 'utils'
 
